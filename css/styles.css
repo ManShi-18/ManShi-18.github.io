@@ -1,4 +1,4 @@
-body {
+/* body {
     margin: 60px auto;
     width: 70%;
 }
@@ -40,4 +40,583 @@ ul.posts {
 
 ul.posts li {
     list-style: none;
+}
+ */
+
+/*welcome header*/
+/*set global config*/
+body {
+    font-family: "Times New Roman", Times, serif !important;
+}
+
+nav {
+    font-size: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f1f1f1;
+    overflow: hidden;
+    z-index: 1;
+}
+
+    nav a {
+        display: block;
+        float: left;
+        color: #333;
+        text-align: center;
+        padding: 10px 16px;
+        text-decoration: none;
+    }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+
+
+
+
+body {
+    background-color: #f8f8f8;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+/*image profile css*/
+.profile-picture-container {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 10px;
+    background-color: #ccc;
+}
+
+.profile-picture {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.name-picture-container {
+    width: 100px;
+    height: 80px;
+    margin-bottom:-20px;
+    margin-top:-38px;
+
+}
+
+.name-picture {
+    display: flex;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+
+/*home layout css*/
+.home {
+    background-color: #f7f7f7;
+    padding: 20px;
+}
+
+
+.container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        max-width: 2800px;
+        margin: 0 auto;
+    }
+
+.left {
+    flex-basis: 40%;
+    margin-right: 40px;
+    margin-top: 70px;
+}
+.email-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+    .email-container p {
+        margin: -10px;
+    }
+
+    .email-container a {
+        margin-left: -5px;
+    }
+
+.name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.name p {
+    margin-top: -30px;
+    font-size:20px;
+    font-weight: bold;
+    margin-right:30px;
+}
+
+.right {
+    flex-basis: 40%;
+}
+
+
+.header {
+    font-size: 18px;
+    font-weight: bold;
+
+    text-align: left;
+    margin-bottom: 50px; /* modified margin */
+    margin-top: 18px;
+}
+
+.news {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+    .news ul {
+
+        margin-top:-20px;
+    }
+.about-me {
+    margin-top: -30px;
+    margin-bottom: 0px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .left, .right {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .right {
+        margin-top: 40px;
+    }
+    .interests-education-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .interests, .education {
+        margin: 0 0 20px;
+        width: 100%;
+    }
+}
+
+.interests-education-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.interests, .education {
+    flex-basis: 48%;
+}
+
+.interests h3, .education h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+/*adjust size of font for each section*/
+.news li {
+    font-size: 14px;
+}
+.interests li {
+    font-size: 13.6px;
+}
+.education li {
+    font-size: 13.5px;
+}
+/**/
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+/* projects config*/
+.tags {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+    .tags select {
+        margin: 0 10px;
+        padding: 5px 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+/*project*/
+
+.container #projects {
+    width: 4000px;
+}
+
+.projects-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    max-height: calc(2 * (350px + 40px));
+    overflow-y: auto;
+
+
+}
+
+.project {
+
+    flex-basis: calc(30.33% - 20px);
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 360px;
+    overflow: hidden; /* add hidden to hide the overflowing content */
+}
+
+.project-top {
+    display: flex;
+    flex-direction: row;
+}
+
+.project-image-container {
+    position: relative;
+    width: 378px;
+    height: 252px;
+    margin-top:-10px;
+    margin-left:-30px;
+    margin-bottom:-20px;
+}
+
+    .project-image-container img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain; /* scale the image to fit while preserving aspect ratio */
+    }
+
+.project-media-container {
+    margin-top: 50px;
+    width: 12%;
+    position: absolute;
+    top: 0;
+    margin-right: 10px;
+    margin-left: -15px;
+    right: -2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+    .project-media-container a {
+        margin-bottom: 20px;
+        font-size: 14px
+    }
+
+.project-media {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+    .project-media a {
+        margin-bottom: 10px;
+        padding: 5px 10px;
+        border: 1px solid #007bff;
+        border-radius: 5px;
+        text-decoration: none;
+        color: #007bff;
+    }
+
+.project-details-container {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    margin-top: auto; /* make the margin to the top of the container automatically adjust to fit the remaining space */
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    height: 100%; /* set a fixed height that is 40% of the parent height minus the top margin */
+
+
+}
+
+    .project-details-container h6 {
+
+        margin-bottom:-24px;
+
+    }
+    .project-header {
+        margin-bottom: 20px;
+    }
+
+    .project-header h3 {
+        margin: 0;
+    }
+
+.project-description {
+    margin: 0;
+    padding-left: 20px;
+    list-style: disc;
+    list-style-position: inside;
+    overflow-y: scroll;
+    max-height: 100%;
+    margin-top: 5px;
+    margin-left:-20px;
+}
+
+    .project-description li {
+    font-size:12px;
+    margin-bottom:2px;
+    }
+    .proj-header {
+        text-align: center;
+        margin-bottom: -30px;
+        margin-top: 20px;
+        padding-top: 40px;
+    }
+
+    .proj-header h2 {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+@media screen and (max-width: 768px) {
+    .project-top {
+        flex-direction: column;
+    }
+
+    .project-media-container {
+        width: 100%;
+        position: relative;
+        margin-top: 10px;
+    }
+
+    .project-image-container {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .project-details-container {
+        height: auto;
+    }
+}
+
+
+/* publications css */
+
+#publications {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.publications-header {
+    padding-top: 90px;
+    margin-left: auto;
+    text-align: center;
+    margin-bottom: -30px;
+    margin-top: 0px;
+}
+
+
+.publications-list {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: flex-start; /* align to left edge */
+
+    max-width: 100%; /* occupy 60% of parent width at maximum */
+    margin-left: 157px;
+    margin-right:40px;
+}
+
+.publications-list ul {
+    list-style: none;
+    margin-bottom:0;
+    margin: -10px;
+    padding: 0;
+}
+
+
+    .publications-list p {
+        margin-top: 0;
+        margin-bottom: -10px;
+        margin-top: -15px;
+    }
+
+.teach-list {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: flex-start; /* align to left edge */
+    margin-left: 10px;
+    width: 100%;
+    max-width: 600px;
+    
+}
+
+    .teach-list ul {
+        list-style: none;
+        margin-bottom: 0;
+        margin: -10px;
+        padding: 0;
+    }
+
+
+    .teach-list p {
+        margin-top: 0;
+        margin-bottom: -10px;
+        margin-top: -15px;
+        font-size: 10px;
+    }
+
+.talk-list {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: flex-start; /* align to left edge */
+    margin-left: 10px;
+    width: 100%;
+    max-width: 600px;
+
+}
+
+    .talk-list ul {
+        list-style: none;
+        margin-bottom: 0;
+        margin: -10px;
+        padding: 0;
+    }
+
+
+    .talk-list p {
+        margin-top: 0;
+        margin-bottom: -10px;
+        margin-top: -15px;
+        font-size: 10px;
+    }
+
+
+.publication {
+    text-align: left;
+    margin-right: 50px;
+}
+
+.publication-title {
+    font-size: 18px;
+    margin-bottom: 0px;
+}
+
+.publication-description {
+    margin-bottom: 0px;
+}
+
+.publication-link {
+    color: blue;
+    text-decoration: none;
+}
+
+    .publication-link:hover {
+        text-decoration: underline;
+    }
+
+
+
+.pub-left {
+    flex-basis: 60%;
+    margin-left: -20px;
+    margin-top: 0px;
+    max-width: 60%;
+    display: flex; /* make the container a flex container */
+    flex-direction: column; /* set the flex direction to column */
+
+}
+
+.pub-right {
+    width: 40%;
+    flex-basis: 40%;
+    max-width: 40%;
+    display: flex; /* make the container a flex container */
+    flex-direction: column; /* set the flex direction to column */
+    margin: 0 auto;
+    margin-left: -30px;
+}
+
+.pub-header {
+    margin-left: 148px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    margin-top:-120px;
+}
+
+
+
+
+.teach-header {
+    margin-top:-0px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+}
+
+
+
+.talk-header {
+
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    margin-top:40px;
 }
